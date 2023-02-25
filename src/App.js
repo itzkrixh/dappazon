@@ -31,10 +31,18 @@ function App() {
   }
 
   const loadBlockchainData = async () => {
+    // provider
     const provider = new ethers.providers.Web3Provider(window.ethereum)
     setProvider(provider)
+
+    // network
     const network = await provider.getNetwork()
 
+    console.log(config[31337].dappazon.address)
+    console.log(network.chainId)
+
+
+    // dappazon
     const dappazon = new ethers.Contract(config[network.chainId].dappazon.address, Dappazon, provider)
     setDappazon(dappazon)
 
