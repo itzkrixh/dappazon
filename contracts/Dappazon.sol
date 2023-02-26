@@ -11,12 +11,20 @@ contract Dappazon {
         string image;
         uint256 cost;
         uint256 rating;
-        uint256 stock;
+        uint256 stock; 
     }
 
     struct Order {
         uint256 time;
         Item item;
+    }
+
+    struct Ledger{
+        uint256 time;
+        uint256 amount;
+        bool isComplete;
+        bool isDelivered;
+        bool isReceived;
     }
 
     mapping(uint256 => Item) public items;

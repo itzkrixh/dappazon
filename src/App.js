@@ -37,9 +37,9 @@ function App() {
 
     // network
     const network = await provider.getNetwork()
-
-    console.log(config[31337].dappazon.address)
     console.log(network.chainId)
+
+    console.log(config[997].dappazon.address)
 
 
     // dappazon
